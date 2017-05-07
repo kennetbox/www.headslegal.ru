@@ -1,0 +1,18 @@
+$susy: (
+  columns: 12,
+  gutters: 1/4,
+  math: fluid,
+  output: float,
+  gutter-position: after,
+  global-box-sizing: border-box
+);
+
+
+.wrap {
+  @include container(100%);
+  @include border-box-sizing;
+  @include susy-clearfix;
+  position: relative;
+  padding: 0 54px;
+  width: 100%
+}

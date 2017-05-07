@@ -1,0 +1,192 @@
+.slider-arrows
+  position: absolute
+  width: 100%
+  top: 50%
+  transform: translateY(-50%)
+  .slide-prev
+    position: absolute
+    left: 54px
+    z-index: 1
+    width: 40px
+    height: 40px
+    border: 1px solid rgba(white,0.3)
+    background-color: transparent
+    transform: translateY(-50%) rotate(45deg)
+    overflow: hidden
+    text-indent: -9999px
+    padding: 0
+    transition: border 0.3s ease
+    &:hover
+      border: 1px solid rgba(white,1)
+    &::before
+      content: ""
+      background-image: url(../images/slider-arrow.svg)
+      background-repeat: no-repeat
+      background-position: 50% 50%
+      width: 38px
+      height: 38px
+      display: block
+      transform: rotate(-45deg)
+  .slide-next
+    @extend .slide-prev
+    left: auto
+    right: 54px
+    transform: translateY(-50%) rotate(225deg)
+.slider-dots
+  position: absolute
+  bottom: 30px
+  width: 100%
+  .slick-dots
+    text-align: center
+    li
+      display: inline-block
+      height: 16px
+      width: 16px
+      text-align: center
+      margin: 0 10px
+      button
+        position: relative
+        width: 16px
+        height: 16px
+        padding: 0
+        border: 2px solid transparent
+        transform: rotate(45deg)
+        text-indent: -99999px
+        overflow: hidden
+        background-color: transparent
+        font-size: 0
+        &::before
+          content: ""
+          position: absolute
+          display: block
+          background-color: $white
+          width: 8px
+          height: 8px
+          opacity: 0.4
+          top: 2px
+          left: 2px
+          transition: opacity 0.3s ease
+        &:hover
+          &::before
+            opacity: 1
+    li.slick-active
+      button
+        width: 16px
+        height: 16px
+        border: 2px solid $white
+        background-color: transparent
+        transition: background 0.3s ease
+        &::before
+          opacity: 0
+        &:hover
+          &::before
+            opacity: 1
+.main-slider-container
+  position: relative
+  width: 100%
+  padding: 0
+  @media all and (max-width: $md)
+    margin-top: 61px
+  .main-slide
+    width: 100%
+    position: relative
+    cursor: grab
+    .main-slide-img
+      width: 100%
+      height: 500px
+      background-size: cover
+      &::after
+        content: ""
+        position: absolute
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+        background: rgba($black,0.4)
+      @media all and (max-width: $xs)
+        height: 320px
+      img
+        position: relative
+        width: 100%
+    .main-slide-desc
+      padding-left: calc(280px / 2)
+      width: 60%
+      position: absolute
+      height: 100%
+      top: 0
+      left: 0
+      display: flex
+      flex-direction: column
+      justify-content: center
+      @media all and (max-width: $md)
+        width: 100%
+      @media all and (max-width: $xs)
+        text-align: center
+        padding: 0 8%
+      .slide-title
+        position: relative
+        font-size: 60px
+        line-height: 60px
+        font-weight: bold
+        padding-bottom: 30px
+        margin-bottom: 20px
+        @media all and (max-width: $xs)
+          font-size: 30px
+          line-height: 32px
+        &::after
+          content: ""
+          position: absolute
+          bottom: 0
+          left: 0
+          display: block
+          width: 40px
+          height: 2px
+          background: $peru
+          @media all and (max-width: $xs)
+            left: 50%
+            transform: translateX(-50%)
+      p
+        color: $white
+  .slider-arrows
+    @media all and (max-width: $xs)
+      display: none
+  .slider-dots
+    @media all and (max-width: $xs)
+      bottom: 20px
+.client-slider-container
+  float: left
+  width: 100%
+  display: block
+  position: relative
+  margin-bottom: 60px
+  .client-slider
+    padding: 0 50px
+    @media all and (max-width: 600px)
+      padding: 0
+    .client-slide
+      border: 1px solid $lightgray
+      text-align: center
+      height: 140px
+      margin: 0 10px
+      display: flex
+      justify-content: center
+  .client-slider-arrows
+    .slide-prev
+      border: 1px solid rgba($darkgray,0.3)
+      left: 0
+      &::before
+        background-image: url(../images/slider-arrow-dark.svg)
+      &:hover
+        border: 1px solid rgba($gray,1)
+    .slide-next
+      @extend .slide-prev
+      left: auto
+      right: 0
+      transform: translateY(-50%) rotate(225deg)
+  .client-slider-dots
+    bottom: -30px
+    .slick-dots
+      li button::before
+        background-color: $gray
+      li.slick-active button
+        border: 2px solid $gray

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="40" height="40" rx="20"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="40" height="40" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="site" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="01-main" transform="translate(-1290.000000, -3264.000000)">
+            <g id="footer" transform="translate(221.000000, 3102.000000)">
+                <g id="Group" transform="translate(1069.000000, 162.000000)">
+                    <path d="M24.6328125,10.6919643 L24.6328125,13.34375 L23.0558036,13.34375 C22.4799078,13.34375 22.0915189,13.4642845 21.890625,13.7053571 C21.6897311,13.9464298 21.5892857,14.3080333 21.5892857,14.7901786 L21.5892857,16.6886161 L24.5323661,16.6886161 L24.140625,19.6618304 L21.5892857,19.6618304 L21.5892857,27.2857143 L18.515625,27.2857143 L18.515625,19.6618304 L15.9542411,19.6618304 L15.9542411,16.6886161 L18.515625,16.6886161 L18.515625,14.4988839 C18.515625,13.253342 18.8638358,12.2873918 19.5602679,11.6010045 C20.2566999,10.9146171 21.184146,10.5714286 22.3426339,10.5714286 C23.3270139,10.5714286 24.0903991,10.6116067 24.6328125,10.6919643 Z" id="Facebook---FontAwesome" fill="#B4894B"></path>
+                    <use id="Rectangle-5-Copy-2" stroke="#B4894B" mask="url(#mask-2)" stroke-width="2" xlink:href="#path-1"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

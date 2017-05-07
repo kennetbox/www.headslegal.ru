@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="58px" height="57px" viewBox="0 0 58 57" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>arrow :: right</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="9" y="8.28427125" width="40" height="40"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="40" height="40" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-1327.000000, -221.000000)">
+            <g id="content" transform="translate(221.000000, 0.000000)">
+                <g id="slider" transform="translate(0.000000, 0.000000)">
+                    <g id="arrow-::-right" transform="translate(1106.000000, 221.000000)">
+                        <use id="Rectangle-6" stroke="#FFFFFF" mask="url(#mask-2)" stroke-width="2" opacity="0.2" transform="translate(29.000000, 28.284271) rotate(45.000000) translate(-29.000000, -28.284271) " xlink:href="#path-1"></use>
+                        <path d="M33.2033898,31.6486486 C33.0382434,31.8124496 32.9556714,32.0008179 32.9556714,32.2137592 C32.9556714,32.4267005 33.0382434,32.6150688 33.2033898,32.7788698 C33.2694484,32.8443902 33.3520204,32.8976247 33.4511082,32.9385749 C33.5501961,32.9795252 33.6492824,33 33.7483703,33 C33.8474581,33 33.9465445,32.9795252 34.0456323,32.9385749 C34.1447202,32.8976247 34.2355493,32.8443902 34.3181226,32.7788698 L39,28.012285 L34.3181226,23.2457002 C34.1529761,23.0818993 33.9630606,23 33.7483703,23 C33.5336799,23 33.3520216,23.0818993 33.2033898,23.2457002 C33.0382434,23.3931211 32.9556714,23.5773945 32.9556714,23.7985258 C32.9556714,24.0196571 33.0382434,24.2039305 33.2033898,24.3513514 L36.0521512,27.2014742 L19.7926988,27.2014742 C19.5780085,27.2014742 19.3922216,27.2751835 19.2353325,27.4226044 C19.0784434,27.5700253 19,27.7583936 19,27.987715 C19,28.2006563 19.0784434,28.3849296 19.2353325,28.5405405 C19.3922216,28.6961515 19.5780085,28.7739558 19.7926988,28.7739558 L36.1016949,28.7739558 L33.2033898,31.6486486 Z" id="Login---simple-line-icons" fill="#FFFFFF" opacity="0.8"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
