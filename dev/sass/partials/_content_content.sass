@@ -40,6 +40,47 @@ section
   width: 100%
   padding: 50px 0
 
+
+// SECTION HEADING & SUBHEADING
+.section-heading
+  position: relative
+  width: 100%
+  float: left
+  margin-bottom: 14px
+  padding-bottom: 10px
+  clear: none
+  color: #656565
+  font-size: 30px
+  line-height: 35px
+  text-align: center
+  font-weight: 700
+  text-transform: uppercase
+  border-style: none none solid
+  border-bottom: 1px none #ccc
+
+.section-heading:before
+  content: ''
+  display: block
+  position: absolute
+  width: 40px
+  height: 2px
+  left: 50%
+  bottom: 0px
+  margin: 0 auto
+  background: #b4894b
+  transform: translateX(-50%)
+
+.section-subheading
+  float: left
+  width: 100%
+  position: relative
+  margin-bottom: 30px
+  text-align: center
+  font-size: 14px
+  text-transform: none
+
+// SETION TITLE & SUBTITLE
+
 // MAIN
 main
   @include span(12)
@@ -55,3 +96,15 @@ main
   padding-bottom: 222px
   @media all and (max-width: $md)
     padding-left: 0
+
+
+// MAIN FILTER
+
+#main-filter
+  background: $darkgray
+
+  .section-heading, .section-subheading
+    color: white
+
+
+// POPULAR SERVICES MAIN
