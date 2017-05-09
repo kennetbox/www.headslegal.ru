@@ -172,6 +172,21 @@ html
               a(href="#").article-description
                 .article-title Последний транш — Боснии и Герцеговине — будет выплачен в ближайшие месяцы
                 p.article-text Россия завершает расчеты со странами, которым был должен Советский Союз. Как рассказал «Известиям» источник в правительстве, соглашение о погашении последнего долга на $125,2 млн готово и ожидает подписания. По его оценке …
+            .article-item(href="#")
+              .article-img
+                a(href="#")
+                  img(src="./images/comment-img-01.jpg", alt="alt")
+                .source-logo
+                  img(src="./images/izvestiya.svg", alt="alt")
+              .article-author
+                .author-img
+                  img(src="./images/bazykin-thumb.jpg", alt="alt")
+                .author-name
+                  p Александр Базыкин
+                  span Управляющий партнёр
+              a(href="#").article-description
+                .article-title Последний транш — Боснии и Герцеговине — будет выплачен в ближайшие месяцы
+                p.article-text Россия завершает расчеты со странами, которым был должен Советский Союз. Как рассказал «Известиям» источник в правительстве, соглашение о погашении последнего долга на $125,2 млн готово и ожидает подписания. По его оценке …
                 
           .full-page-link
             .page-button
@@ -233,10 +248,10 @@ html
               a(href="#") все статьи
       //- SERVICES
       section.page-banner#services
+        ul.breadcrumbs
+          li: a(href="#") Главная
+          li Услуги
         .wrap
-          ul.breadcrumbs
-            li: a(href="#") Главная
-            li Услуги
           .page-title Услуги Heads Consulting
           .page-desc Специалисты HEADS Consulting помогут вернуть права, оспорят решения ДПС, урегулируем споры с страховыми компаниями, обжалуем неправомерные решения государственных органов и социальных служб.
       //- services-filter
@@ -373,11 +388,11 @@ html
       
       //- SERVICE
       section
+        ul.breadcrumbs
+          li: a(href="#") Главная
+          li: a(href="#") Услуги
+          li Оспаривание кадастровой стоимости
         .wrap
-          ul.breadcrumbs
-            li: a(href="#") Главная
-            li Услуги
-            li Оспаривание кадастровой стоимости
           .flex-layout
             .main-flex
               .page-title Оспаривание кадастровой стоимости
@@ -444,11 +459,14 @@ html
 
       //- COMMENTS
       section.page-banner#comments
+        ul.breadcrumbs
+          li: a(href="#") Главная
+          li Комментарии в СМИ
         .wrap
-          ul.breadcrumbs
-            li: a(href="#") Главная
-            li Комментарии в СМИ
-            
+          .page-title Услуги Heads Consulting
+          .page-desc Специалисты HEADS Consulting помогут вернуть права, оспорят решения ДПС, урегулируем споры с страховыми компаниями, обжалуем неправомерные решения государственных органов и социальных служб.
+      section#comments-content
+        .wrap            
           .article-container
             .article-item(href="#")
               .article-img
@@ -587,20 +605,13 @@ html
                 p.article-text Россия завершает расчеты со странами, которым был должен Советский Союз. Как рассказал «Известиям» источник в правительстве, соглашение о погашении последнего долга на $125,2 млн готово и ожидает подписания. По его оценке …
           .page-navigation
             ul
-              li 
-                a(href="#") 1
-              li 
-                a(href="#") 2
-              li 
-                a(href="#") 3
-              li 
-                a(href="#") 4
-              li 
-                a(href="#") 5
-              li 
-                a(href="#") ...
-              li 
-                a(href="#") 35
+              li: a(href="#") 1
+              li: a(href="#") 2
+              li: a(href="#") 3
+              li: a(href="#") 4
+              li: a(href="#") 5
+              li: a(href="#") ...
+              li: a(href="#") 35
       
       //- COMMENT
       section
