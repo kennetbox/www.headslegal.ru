@@ -80,7 +80,6 @@ ul.dotted
 ul.diamond
   @include span(12)
   @include susy-clearfix
-  margin-top: 30px
 
   li
     @include span(3)
@@ -128,6 +127,25 @@ ul.diamond
 
       &:hover
         color: $peru
+
+  .service-list-title
+    position: relative
+    font-size: 20px
+    font-weight: bold
+    text-transform: uppercase
+    line-height: 26px
+    padding-bottom: 7px
+    margin-bottom: 15px
+
+    &::after
+      content: ''
+      display: block
+      position: absolute
+      bottom: 0
+      left: 0
+      height: 2px
+      width: 40px
+      background: $peru
 
 
 
@@ -191,6 +209,7 @@ section
   font-weight: bold
   text-transform: uppercase
   padding-bottom: 20px
+  margin-bottom: 30px
 
 .bottom-border
   border-bottom: 1px solid $lightgray
@@ -406,27 +425,76 @@ main
 #services
   background-image: url(../images/banner-services.png)
 
-// BREADCRUMBS
-ul.breadcrumbs
-  top: 0
-  left: 0
-  margin-top: 20px
-  padding-left: 55px
-  position: absolute
-  z-index: 1
-  color: #fff
-  li
-    float: left
-    display: inline-block;
-    margin-right: 10px;
-    padding-right: 17px;
-    background-image: url(../images/breadcrumb.png);
-    background-position: 100% 50%;
-    background-size: 7px 7px;
-    background-repeat: no-repeat;
-    text-decoration: underline;
-    &:last-child
-      text-decoration: none
-      background-image: none
-    a
-      color: #fff
+
+// Popular services
+#popular-services
+  @extend #main-popular-services
+  padding-bottom: 30px
+  .section-title
+    margin-bottom: 0
+
+// ALL SERVICES
+
+#all-services
+  ul.diamond
+    @include span(3)
+    &:nth-child(4n)
+      @include span(3 last)
+
+    @media all and (max-width: 1680px)
+      &:nth-child(n)
+        @include span(4)
+      &:nth-child(3n)
+        @include span(4 last)
+
+    @media all and (max-width: 1340px)
+      &:nth-child(n)
+        @include span(6)
+      &:nth-child(2n)
+        @include span(6 last)
+
+    @media all and (max-width: 767px)
+      &:nth-child(n)
+        @include span(12)
+
+    margin-bottom: 30px
+
+    li
+      @include span(12)
+
+// FLEX LAYOUT
+.flex-layout
+  display: flex
+  flex-direction: row
+  justify-content: space-around
+  align-items: stretch
+
+  .main-flex
+    flex: 1
+    padding-right: 54px
+
+  .flex-side
+    width: 350px
+    // background: red
+    //padding-right: 54px
+
+    .section-title
+      position: relative
+      padding-bottom: 10px
+      margin-bottom: 13px
+
+      &::after
+        content: ''
+        display: block
+        position: absolute
+        bottom: 0
+        left: 0
+        height: 2px
+        width: 40px
+        background: $peru
+
+    ul.diamond
+      margin-bottom: 30px
+
+      li
+        @include span(12)
