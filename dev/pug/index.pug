@@ -651,7 +651,13 @@ html
               a.all-items(href="#") Все услуги
       
       //- ABOUT
-      section
+      section.page-banner#about
+        ul.breadcrumbs
+          li: a(href="#") Главная
+          li О компании
         .wrap
+          .flex-layout
+            .main-flex
+          .flex-side
 
     include partials/footer
