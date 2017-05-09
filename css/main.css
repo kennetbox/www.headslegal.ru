@@ -710,8 +710,13 @@ main {
     padding-right: 54px; }
   .flex-layout .flex-side {
     width: 350px; }
+    .flex-layout .flex-side:after {
+      content: " ";
+      display: block;
+      clear: both; }
     .flex-layout .flex-side .section-title {
       position: relative;
+      clear: both;
       padding-bottom: 10px;
       margin-bottom: 13px; }
       .flex-layout .flex-side .section-title::after {
@@ -730,6 +735,14 @@ main {
         float: left;
         margin-left: 0;
         margin-right: 0; }
+    .flex-layout .flex-side ul.linked-list {
+      margin-bottom: 10px; }
+    .flex-layout .flex-side .all-items {
+      margin-left: 20px;
+      margin-bottom: 50px; }
+
+#comments .comment-item {
+  margin-bottom: 50px; }
 
 .slider-arrows {
   position: absolute;

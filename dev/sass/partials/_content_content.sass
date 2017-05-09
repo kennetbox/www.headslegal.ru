@@ -148,8 +148,6 @@ ul.diamond
       background: $peru
 
 
-
-
 // BUTTONS
 button
   border: none
@@ -474,12 +472,12 @@ main
     padding-right: 54px
 
   .flex-side
+    @include susy-clearfix
     width: 350px
-    // background: red
-    //padding-right: 54px
 
     .section-title
       position: relative
+      clear: both
       padding-bottom: 10px
       margin-bottom: 13px
 
@@ -495,6 +493,18 @@ main
 
     ul.diamond
       margin-bottom: 30px
-
       li
         @include span(12)
+
+    ul.linked-list
+      margin-bottom: 10px
+
+    .all-items
+      margin-left: 20px
+      margin-bottom: 50px
+
+
+// COMMENTS PAGE
+#comments
+  .comment-item
+    margin-bottom: 50px
