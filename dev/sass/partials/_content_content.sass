@@ -13,6 +13,57 @@ body
 
 // LINKS
 a
+  //color: $peru
+
+.all-items
+  color: $peru
+  font-size: 15px
+  display: inline-block
+  font-weight: bold
+  text-transform: uppercase
+  text-decoration: none
+  border-bottom: 1px dotted $peru
+
+.full-page-link
+  @include span(12)
+  position: relative
+
+  &::before
+    content: ""
+    position: absolute
+    width: 100%
+    height: 1px
+    background-color: $lightgray
+    display: block
+    left: 0
+    top: 50%
+
+
+  .page-button
+    display: block
+    position: relative
+    width: 220px
+    background-color: $main-bg
+    margin: 0 auto
+
+    a
+      color: $peru
+      display: block
+      width: 160px
+      height: 44px
+      border: 1px solid $peru
+      text-align: center
+      line-height: 42px
+      text-decoration: none
+      text-transform: uppercase
+      border-radius: 3px
+      margin: 0 auto
+      transition-property: color, background
+      transition: 0.3s ease
+
+      &:hover
+        background-color: $peru
+        color: $main-bg
 
 // PARAGRAPHS
 p
@@ -24,8 +75,78 @@ ul.ordered
   li
 ul.dotted
   li
+
+// Diamond list
 ul.diamond
+  @include span(12)
+  @include susy-clearfix
+
   li
+    @include span(3)
+    &:nth-child(4n)
+      @include span(3 last)
+
+    padding-bottom: 8px
+    position: relative
+
+    @media all and (max-width: 1680px)
+      &:nth-child(n)
+        @include span(4)
+      &:nth-child(3n)
+        @include span(4 last)
+
+    @media all and (max-width: 1340px)
+      &:nth-child(n)
+        @include span(6)
+      &:nth-child(2n)
+        @include span(6 last)
+
+    @media all and (max-width: 767px)
+      &:nth-child(n)
+        @include span(12)
+
+    &::before
+      content: ""
+      display: block
+      position: absolute
+      left: 0
+      background: $peru
+      width: 6px
+      height: 6px
+      top: 7px
+      transform: rotate(45deg)
+
+    a
+      display: block
+      position: relative
+      font-size: 15px
+      color: $darkgray
+      line-height: 19px
+      padding-left: 20px
+      transition: color 0.3s ease
+
+      &:hover
+        color: $peru
+
+  .service-list-title
+    position: relative
+    font-size: 20px
+    font-weight: bold
+    text-transform: uppercase
+    line-height: 26px
+    padding-bottom: 7px
+    margin-bottom: 15px
+
+    &::after
+      content: ''
+      display: block
+      position: absolute
+      bottom: 0
+      left: 0
+      height: 2px
+      width: 40px
+      background: $peru
+
 
 // BUTTONS
 button
@@ -39,6 +160,57 @@ section
   float: left
   width: 100%
   padding: 50px 0
+
+
+// SECTION HEADING & SUBHEADING
+.section-heading
+  position: relative
+  width: 100%
+  float: left
+  margin-bottom: 14px
+  padding-bottom: 10px
+  clear: none
+  color: #656565
+  font-size: 30px
+  line-height: 35px
+  text-align: center
+  font-weight: 700
+  text-transform: uppercase
+  border-style: none none solid
+  border-bottom: 1px none #ccc
+
+.section-heading:before
+  content: ''
+  display: block
+  position: absolute
+  width: 40px
+  height: 2px
+  left: 50%
+  bottom: 0px
+  margin: 0 auto
+  background: #b4894b
+  transform: translateX(-50%)
+
+.section-subheading
+  float: left
+  width: 100%
+  position: relative
+  margin-bottom: 30px
+  text-align: center
+  font-size: 14px
+  text-transform: none
+
+// SETION TITLE & SUBTITLE
+
+.section-title
+  font-size: 20px
+  font-weight: bold
+  text-transform: uppercase
+  padding-bottom: 20px
+  margin-bottom: 30px
+
+.bottom-border
+  border-bottom: 1px solid $lightgray
 
 // MAIN
 main
@@ -55,3 +227,284 @@ main
   padding-bottom: 222px
   @media all and (max-width: $md)
     padding-left: 0
+
+
+// Main Filter
+#main-filter
+  background: $darkgray
+
+  .section-heading, .section-subheading
+    color: white
+
+// Main Popular Services
+#main-popular-services
+  background: $air
+  padding-top: 30px
+
+  .all-items
+    position: absolute
+    right: 54px
+    top: 0
+
+    @media all and (max-width: $xs)
+      top: auto
+      right: auto
+      left: 54px
+      bottom: 0
+
+// Advantages Banner
+#advantages-banner
+  padding: 0
+
+  .advantages-background
+    position: absolute
+    width: 100%
+    height: 100%
+    background-size: cover
+    background-position: 50% 50%
+    background-image: url(../images/advantages-bg.jpg)
+
+    &::after
+      content: ""
+      position: absolute
+      width: 100%
+      height: 100%
+      background: rgba($black, 0.5)
+
+  .advantage-items
+    display: flex
+    width: 100%
+    padding: 50px 0
+
+    @media all and (max-width: $xs)
+      flex-direction: column
+      align-items: center
+
+    .advantage
+      width: calc(100% / 3)
+      text-align: center
+      position: relative
+      padding: 30px 15px
+
+      @media all and (max-width: $xs)
+        width: 80%
+
+
+      &:nth-child(2)
+        border-left: 2px solid $peru
+        border-right: 2px solid $peru
+
+        @media all and (max-width: $xs)
+
+          border: none
+          border-top: 2px solid $peru
+          border-bottom: 2px solid $peru
+
+      .advantage-head
+        color: $white
+        font-size: 100px
+        font-weight: bold
+        display: block
+        line-height: 75px
+        margin-bottom: 30px
+
+      p
+        color: $white
+        text-transform: uppercase
+        font-size: 20px
+        line-height: 28px
+
+// Comments & Blog
+.comments-container
+  @include span(12)
+  @include susy-clearfix
+
+  .comment-item
+    @include span(4)
+    &:nth-child(3n)
+      @include span(4 last)
+
+    margin-bottom: 30px
+
+    .comment-img
+      width: 100%
+      position: relative
+      margin-bottom: 15px
+
+      img
+        position: relative
+        width: 100%
+
+      .source-logo
+        width: 130px
+        height: 48px
+        position: absolute
+        bottom: -5px
+        right: -5px
+
+        img
+          width: 130px
+          height: 48px
+
+    .comment-author
+      padding-bottom: 15px
+      border-bottom: 1px solid $peru
+      height: 63px
+      margin-bottom: 15px
+
+      .author-img
+        width: 48px
+        height: 48px
+        border-radius: 50%
+        position: relative
+        overflow: hidden
+        float: left
+        margin-right: 15px
+
+        img
+          position: relative
+          width: 100%
+          height: 100%
+
+      .author-name
+        padding-top: 8px
+
+        p
+          font-size: 15px
+          font-weight: bold
+          margin-bottom: 0
+          float: none
+
+        span
+          font-size: 13px
+
+    .comment-description
+      text-decoration: none
+      color: $darkgray
+
+      .comment-title
+        font-size: 20px
+        text-transform: uppercase
+        font-weight: bold
+        line-height: 26px
+
+
+// Comments main page custom
+
+#comments-section
+  background: $air
+
+  .page-button
+    background: $air
+
+
+// PAGE BANNER
+.page-banner
+  display: flex
+  flex-direction: column
+  justify-content: center
+  background-size: cover
+  align-items: center
+  padding: 100px 0
+
+  .page-title
+    @extend .section-heading
+    color: white
+
+  .page-desc
+    @extend .section-subheading
+    float: none
+    color: white
+    max-width: 730px
+    margin: 0 auto
+
+
+// PAGE BANNER CUSTOM
+#services
+  background-image: url(../images/banner-services.png)
+
+
+// Popular services
+#popular-services
+  @extend #main-popular-services
+  padding-bottom: 30px
+  .section-title
+    margin-bottom: 0
+
+// ALL SERVICES
+
+#all-services
+  ul.diamond
+    @include span(3)
+    &:nth-child(4n)
+      @include span(3 last)
+
+    @media all and (max-width: 1680px)
+      &:nth-child(n)
+        @include span(4)
+      &:nth-child(3n)
+        @include span(4 last)
+
+    @media all and (max-width: 1340px)
+      &:nth-child(n)
+        @include span(6)
+      &:nth-child(2n)
+        @include span(6 last)
+
+    @media all and (max-width: 767px)
+      &:nth-child(n)
+        @include span(12)
+
+    margin-bottom: 30px
+
+    li
+      @include span(12)
+
+// FLEX LAYOUT
+.flex-layout
+  display: flex
+  flex-direction: row
+  justify-content: space-around
+  align-items: stretch
+
+  .main-flex
+    flex: 1
+    padding-right: 54px
+
+  .flex-side
+    @include susy-clearfix
+    width: 350px
+
+    .section-title
+      position: relative
+      clear: both
+      padding-bottom: 10px
+      margin-bottom: 13px
+
+      &::after
+        content: ''
+        display: block
+        position: absolute
+        bottom: 0
+        left: 0
+        height: 2px
+        width: 40px
+        background: $peru
+
+    ul.diamond
+      margin-bottom: 30px
+      li
+        @include span(12)
+
+    ul.linked-list
+      margin-bottom: 10px
+
+    .all-items
+      margin-left: 20px
+      margin-bottom: 50px
+
+
+// COMMENTS PAGE
+#comments
+  .comment-item
+    margin-bottom: 50px
