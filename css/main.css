@@ -546,46 +546,46 @@ main {
         font-size: 20px;
         line-height: 28px; }
 
-.comments-container {
+.article-container {
   width: 100%;
   float: left;
   margin-left: 0;
   margin-right: 0; }
-  .comments-container:after {
+  .article-container:after {
     content: " ";
     display: block;
     clear: both; }
-  .comments-container .comment-item {
+  .article-container .article-item {
     width: 32.20339%;
     float: left;
     margin-right: 1.69492%;
     margin-bottom: 30px; }
-    .comments-container .comment-item:nth-child(3n) {
+    .article-container .article-item:nth-child(3n) {
       width: 32.20339%;
       float: right;
       margin-right: 0; }
-    .comments-container .comment-item .comment-img {
+    .article-container .article-item .article-img {
       width: 100%;
       position: relative;
       margin-bottom: 15px; }
-      .comments-container .comment-item .comment-img img {
+      .article-container .article-item .article-img img {
         position: relative;
         width: 100%; }
-      .comments-container .comment-item .comment-img .source-logo {
+      .article-container .article-item .article-img .source-logo {
         width: 130px;
         height: 48px;
         position: absolute;
         bottom: -5px;
         right: -5px; }
-        .comments-container .comment-item .comment-img .source-logo img {
+        .article-container .article-item .article-img .source-logo img {
           width: 130px;
           height: 48px; }
-    .comments-container .comment-item .comment-author {
+    .article-container .article-item .article-author {
       padding-bottom: 15px;
       border-bottom: 1px solid #B4894B;
       height: 63px;
       margin-bottom: 15px; }
-      .comments-container .comment-item .comment-author .author-img {
+      .article-container .article-item .article-author .author-img {
         width: 48px;
         height: 48px;
         border-radius: 50%;
@@ -593,23 +593,23 @@ main {
         overflow: hidden;
         float: left;
         margin-right: 15px; }
-        .comments-container .comment-item .comment-author .author-img img {
+        .article-container .article-item .article-author .author-img img {
           position: relative;
           width: 100%;
           height: 100%; }
-      .comments-container .comment-item .comment-author .author-name {
+      .article-container .article-item .article-author .author-name {
         padding-top: 8px; }
-        .comments-container .comment-item .comment-author .author-name p {
+        .article-container .article-item .article-author .author-name p {
           font-size: 15px;
           font-weight: bold;
           margin-bottom: 0;
           float: none; }
-        .comments-container .comment-item .comment-author .author-name span {
+        .article-container .article-item .article-author .author-name span {
           font-size: 13px; }
-    .comments-container .comment-item .comment-description {
+    .article-container .article-item .article-description {
       text-decoration: none;
       color: #656565; }
-      .comments-container .comment-item .comment-description .comment-title {
+      .article-container .article-item .article-description .article-title {
         font-size: 20px;
         text-transform: uppercase;
         font-weight: bold;
