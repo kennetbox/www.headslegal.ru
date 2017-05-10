@@ -67,105 +67,33 @@ a
 
 // PARAGRAPHS
 p
+  margin-bottom: 20px
 
-// LISTS
-ul
-	li
-ul.ordered
-  li
-ul.dotted
-  li
-
-// Diamond list
-ul.diamond
-  @include span(12)
-  @include susy-clearfix
-
-  li
-    @include span(3)
-    &:nth-child(4n)
-      @include span(3 last)
-
-    padding-bottom: 8px
-    position: relative
-
-    @media all and (max-width: 1680px)
-      &:nth-child(n)
-        @include span(4)
-      &:nth-child(3n)
-        @include span(4 last)
-
-    @media all and (max-width: 1340px)
-      &:nth-child(n)
-        @include span(6)
-      &:nth-child(2n)
-        @include span(6 last)
-
-    @media all and (max-width: 767px)
-      &:nth-child(n)
-        @include span(12)
-
-    &::before
-      content: ""
-      display: block
-      position: absolute
-      left: 0
-      background: $peru
-      width: 6px
-      height: 6px
-      top: 7px
-      transform: rotate(45deg)
-
-    a
-      display: block
-      position: relative
-      font-size: 15px
-      color: $darkgray
-      line-height: 19px
-      padding-left: 20px
-      transition: color 0.3s ease
-
-      &:hover
-        color: $peru
-
-  .service-list-title
-    position: relative
-    font-size: 20px
-    font-weight: bold
-    text-transform: uppercase
-    line-height: 26px
-    padding-bottom: 7px
-    margin-bottom: 15px
-
-    &::after
-      content: ''
-      display: block
-      position: absolute
-      bottom: 0
-      left: 0
-      height: 2px
-      width: 40px
-      background: $peru
-
-#main-popular-services
-  @media all and (max-width: $xs)
-    ul.diamond
-      padding-bottom: 30px
-    .all-items
-      margin-left: 20px
+b
+  font-weight: bold
 
 // BUTTONS
 button
   border: none
   cursor: pointer
 
+
+// BORDER BOTTOM
+.border-bottom::after
+  content: ''
+  display: block
+  position: absolute
+  bottom: 0
+  left: 0
+  height: 2px
+  width: 40px
+  background: $peru
+
 // SECTIONS
 section
   @include span(12)
   @include susy-clearfix
   position: relative
-  float: left
-  width: 100%
   padding: 50px 0
 
 
@@ -207,7 +135,7 @@ section
   font-size: 14px
   text-transform: none
 
-// SETION TITLE & SUBTITLE
+// SECTION TITLE & SUBTITLE
 
 .section-title
   font-size: 20px
@@ -266,140 +194,7 @@ main
     padding-left: 0
 
 
-// Main Filter
-#main-filter, #services-filter
-  background: $darkgray
 
-  .section-heading, .section-subheading, .section-title
-    color: white
-
-#services-filter
-  padding: 30px 0
-
-  .section-title
-    margin-bottom: 0
-
-.services-filter-container
-  @include span(12)
-  @include susy-clearfix
-
-  .dropdown-container
-    @include span(4)
-    position: relative
-    height: 44px
-    padding: 13px 20px
-    border: 1px solid $lightgray
-    border-radius: 3px
-    cursor: pointer
-
-    @media all and (max-width: $xs)
-      @include span(12)
-      margin-bottom: 20px
-
-    .dropdown-text
-      position: relative
-      text-transform: uppercase
-      color: white
-
-    .dropdown-chevron
-      position: absolute
-      top: -5px
-      right: 0
-      bottom: 0
-      margin: auto
-      margin-right: 20px
-      width: 12px
-      height: 12px
-      background-image: url("../images/chevron-white.svg")
-      background-repeat: no-repeat
-      background-position: center right
-      background-position-x: 95%
-      transform: rotateZ(90deg)
-
-    .dropdown-list
-      display: none
-      top: 55px
-      left: 0px
-      width: 100%
-      position: absolute
-      padding: 20px 20px 10px 15px
-      background: white
-      border-radius: 3px
-      background-color: #fff
-      z-index: 1
-
-      .dropdown-title
-        position: relative
-        width: 100%
-        margin-bottom: 15px
-        padding-bottom: 15px
-        color: $darkgray
-        font-size: 20px
-        font-weight: 700
-        text-align: left
-        text-transform: uppercase
-        &::after
-          content: ""
-          width: 40px
-          height: 2px
-          display: block
-          position: absolute
-          bottom: 0
-          left: 0
-          background: $peru
-
-      ul
-        width: 100%
-        position: relative
-        margin-right: 0px
-        margin-left: 0px
-        color: #fff
-        li
-          margin-bottom: 10px
-          padding-top: 5px
-          padding-bottom: 5px
-          padding-left: 30px
-          background-image: url(../images/dropdown-chevron-inactive.svg)
-          background-position: 0px 8px
-          background-size: 14px
-          background-repeat: no-repeat
-          -webkit-transition: all 300ms ease
-          transition: all 300ms ease
-          border: none
-          color: #999
-          font-size: 16px
-          text-align: left
-          text-transform: none
-          &:hover
-            cursor: pointer
-            background-image: url(../images/dropdown-chevron-active.svg)
-            background-position: 0px 8px
-            background-size: 14px
-            background-repeat: no-repeat
-
-          a
-            color: $darkgray
-            transition: color 0.3s ease
-            &:hover
-              color: $peru
-
-  .dropdown.open
-    .dropdown-list
-      display: block
-
-
-  button.submit
-    @include span(4 last)
-    height: 44px
-    background: $peru
-    font-size: 15px
-    border-radius: 3px
-    color: white
-    text-transform: uppercase
-    opacity: 0.9
-    transition: opacity 0.3s ease
-    &:hover
-      opacity: 1
 // Main Popular Services
 #main-popular-services
   background: $air
@@ -740,9 +535,3 @@ main
       height: 2px
       width: 40px
       background: $peru
-
-  p
-    margin-bottom: 20px
-
-  b
-    font-weight: bold
