@@ -1,0 +1,37 @@
+// FORM
+
+form
+  @include span(12)
+  background: $air
+  padding: 30px
+  margin-top: 20px
+
+  .section-title
+    margin-bottom: 0
+    padding-bottom: 10px
+
+  input
+    @include span(6)
+    &:nth-child(2n)
+      @include span(6 last)
+    border: none
+    background-color: transparent
+    border-bottom: 1px solid $peru
+    text-transform: uppercase
+    line-height: 22px
+    color: $darkgray
+    margin-bottom: 25px
+
+  button
+    background-color: transparent
+    border: 1px solid $peru
+    border-radius: 3px
+    text-transform: uppercase
+    color: $peru
+    font-size: 15px
+    padding: 12px 20px
+    transition-property: color, background
+    transition: 0.3s ease
+    &:hover
+      color: $air
+      background: $peru

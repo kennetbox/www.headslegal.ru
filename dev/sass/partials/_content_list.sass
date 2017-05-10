@@ -1,0 +1,117 @@
+// LISTS
+ul
+	li
+
+
+// Ordered list
+ol
+  counter-reset: myCounter
+
+  li
+    list-style: none
+    display: block
+    color: $darkgray
+
+    &:before
+      counter-increment: myCounter
+      content: counter(myCounter)"."
+      color: $darkgray
+      display: inline-block
+      font-weight: bold
+      text-align: center
+      margin-right: 5px
+
+
+
+// Dotted List
+ul.dotted
+  list-style-type: disc
+  list-style-position: inside
+
+  li
+    position: relative
+
+
+// Diamond list
+ul.diamond
+  @include span(12)
+  @include susy-clearfix
+
+  li
+    @include span(3)
+    &:nth-child(4n)
+      @include span(3 last)
+
+    padding-bottom: 8px
+    padding-left: 20px
+    position: relative
+
+    @media all and (max-width: 1680px)
+      &:nth-child(n)
+        @include span(4)
+      &:nth-child(3n)
+        @include span(4 last)
+
+    @media all and (max-width: 1340px)
+      &:nth-child(n)
+        @include span(6)
+      &:nth-child(2n)
+        @include span(6 last)
+
+    @media all and (max-width: 767px)
+      &:nth-child(n)
+        @include span(12)
+
+    &::before
+      content: ""
+      display: block
+      position: absolute
+      left: 0
+      background: $peru
+      width: 6px
+      height: 6px
+      top: 7px
+      transform: rotate(45deg)
+
+    a
+      display: block
+      position: relative
+      font-size: 15px
+      color: $darkgray
+      line-height: 19px
+      transition: color 0.3s ease
+
+      &:hover
+        color: $peru
+
+  .service-list-title
+    position: relative
+    font-size: 20px
+    font-weight: bold
+    text-transform: uppercase
+    line-height: 26px
+    padding-bottom: 7px
+    margin-bottom: 15px
+
+    &::after
+      content: ''
+      display: block
+      position: absolute
+      bottom: 0
+      left: 0
+      height: 2px
+      width: 40px
+      background: $peru
+
+#main-popular-services
+  @media all and (max-width: $xs)
+    ul.diamond
+      padding-bottom: 30px
+    .all-items
+      margin-left: 20px
+
+
+// PAGINATION
+.page-navigation
+  @include span(12)
+  text-align: center
