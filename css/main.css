@@ -623,6 +623,7 @@ main {
   -ms-flex-pack: center;
   justify-content: center;
   background-size: cover;
+  background-position: center center;
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
@@ -650,6 +651,15 @@ main {
 
 #comments {
   background-image: url(../images/banner-comments.png); }
+
+#about {
+  background-image: url(../images/banner-about.png); }
+
+#team {
+  background-image: url(../images/banner-team.png); }
+
+#partners {
+  background-image: url(../images/banner-clients.png); }
 
 #popular-services {
   padding-bottom: 30px; }
@@ -756,7 +766,14 @@ main {
 
 #information-page {
   padding-top: 85px; }
-  #information-page .page-title {
+  #information-page .main-flex img {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px; }
+  #information-page .main-flex .section-title {
+    padding-bottom: 0;
+    margin-bottom: 10px; }
+  #information-page .main-flex .page-title {
     position: relative;
     font-size: 30px;
     line-height: 38px;
@@ -764,7 +781,7 @@ main {
     font-weight: bold;
     padding-bottom: 6px;
     margin-bottom: 10px; }
-    #information-page .page-title::after {
+    #information-page .main-flex .page-title::after {
       content: '';
       position: absolute;
       display: block;
@@ -773,6 +790,123 @@ main {
       height: 2px;
       width: 40px;
       background: #B4894B; }
+  #information-page .main-flex .date-published {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    position: relative;
+    padding-top: 10px;
+    margin-top: 20px; }
+    #information-page .main-flex .date-published::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 2px;
+      width: 40px;
+      background: #B4894B; }
+    #information-page .main-flex .date-published a {
+      color: #B4894B; }
+  #information-page .main-flex ul.diamond {
+    margin-bottom: 10px; }
+    #information-page .main-flex ul.diamond li {
+      width: 100%;
+      float: left;
+      margin-left: 0;
+      margin-right: 0; }
+
+.team-card-container {
+  width: 23.72881%;
+  float: left;
+  margin-right: 1.69492%;
+  position: relative;
+  margin-bottom: 1.69492%; }
+  .team-card-container:nth-child(4n) {
+    width: 23.72881%;
+    float: right;
+    margin-right: 0; }
+  .team-card-container:after {
+    content: " ";
+    display: block;
+    clear: both; }
+  .team-card-container::after {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to bottom, rgba(51, 51, 51, 0) 60%, #333333 100%); }
+  .team-card-container img {
+    vertical-align: middle;
+    position: relative;
+    width: 100%; }
+  .team-card-container .team-card-titles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding: 20px 20px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    z-index: 2; }
+    .team-card-container .team-card-titles .section-title {
+      color: white;
+      padding: 0;
+      margin: 0; }
+    .team-card-container .team-card-titles p {
+      color: white;
+      margin-bottom: 0; }
+
+#person-detail {
+  padding: 0; }
+  #person-detail ul.breadcrumbs li, #person-detail ul.breadcrumbs a {
+    color: white; }
+  #person-detail .main-flex {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    height: calc(100vh - 200px); }
+    #person-detail .main-flex .team-card-photo {
+      width: 50%;
+      max-width: 600px;
+      background-size: cover;
+      background-position: center top; }
+    #person-detail .main-flex .team-card-description {
+      width: 50%;
+      padding: 90px 30px 0; }
+      #person-detail .main-flex .team-card-description .team-card-name {
+        position: relative;
+        font-size: 30px;
+        text-transform: uppercase;
+        font-weight: bold;
+        line-height: 38px;
+        padding-bottom: 10px;
+        margin-bottom: 15px; }
+        #person-detail .main-flex .team-card-description .team-card-name span {
+          font-weight: normal;
+          display: block; }
+      #person-detail .main-flex .team-card-description .team-card-position {
+        font-weight: bold;
+        margin-bottom: 30px; }
+  #person-detail .flex-side {
+    padding-top: 90px;
+    padding-right: 54px; }
+  #person-detail #bazykin-card {
+    background-image: url(../images/bazykin-photo.png); }
 
 .services-filter-container {
   width: 100%;
@@ -1025,7 +1159,102 @@ ul.diamond {
   float: left;
   margin-left: 0;
   margin-right: 0;
-  text-align: center; }
+  position: relative;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  .page-navigation:after {
+    content: " ";
+    display: block;
+    clear: both; }
+  .page-navigation::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background: #999999; }
+  .page-navigation ul {
+    display: block;
+    background: #F6F5F3;
+    padding: 0 30px;
+    z-index: 1; }
+    .page-navigation ul li {
+      display: inline-block;
+      width: 44px;
+      height: 44px;
+      position: relative;
+      border: 1px solid #B4894B;
+      border-radius: 3px;
+      line-height: 44px;
+      text-align: center;
+      font-weight: bold;
+      transition: background 0.3s ease; }
+      .page-navigation ul li a {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+        color: #999999;
+        transition: color 0.3s ease; }
+      .page-navigation ul li:hover {
+        background: #B4894B; }
+        .page-navigation ul li:hover a {
+          color: #F6F5F3; }
+    .page-navigation ul .active a {
+      color: #B4894B; }
+
+.flex-side ul.team-side {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 30px; }
+  .flex-side ul.team-side:after {
+    content: " ";
+    display: block;
+    clear: both; }
+  .flex-side ul.team-side li {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0; }
+    .flex-side ul.team-side li:after {
+      content: " ";
+      display: block;
+      clear: both; }
+    .flex-side ul.team-side li .article-author {
+      width: 100%;
+      float: left;
+      margin-left: 0;
+      margin-right: 0;
+      padding: 20px  0;
+      border-bottom: 1px solid #e6e6e6; }
+      .flex-side ul.team-side li .article-author:after {
+        content: " ";
+        display: block;
+        clear: both; }
+      .flex-side ul.team-side li .article-author .author-img {
+        width: 40px;
+        height: 40px;
+        position: relative;
+        float: left;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-right: 10px; }
+        .flex-side ul.team-side li .article-author .author-img img {
+          position: relative;
+          width: 100%; }
+    .flex-side ul.team-side li .author-name p {
+      font-weight: bold;
+      font-size: 15px;
+      margin-bottom: 0; }
 
 form {
   width: 100%;
@@ -1035,6 +1264,10 @@ form {
   background: #efeeeb;
   padding: 30px;
   margin-top: 20px; }
+  form:after {
+    content: " ";
+    display: block;
+    clear: both; }
   form .section-title {
     margin-bottom: 0;
     padding-bottom: 10px; }
@@ -1054,6 +1287,7 @@ form {
       float: right;
       margin-right: 0; }
   form button {
+    display: block;
     background-color: transparent;
     border: 1px solid #B4894B;
     border-radius: 3px;
