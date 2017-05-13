@@ -908,6 +908,27 @@ main {
   #person-detail #bazykin-card {
     background-image: url(../images/bazykin-photo.png); }
 
+.partners-card-container {
+  width: 23.72881%;
+  float: left;
+  margin-right: 1.69492%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 1px solid #e6e6e6;
+  height: 150px;
+  margin-bottom: 1.69492%; }
+  .partners-card-container:nth-child(4n) {
+    width: 23.72881%;
+    float: right;
+    margin-right: 0; }
+
 .services-filter-container {
   width: 100%;
   float: left;

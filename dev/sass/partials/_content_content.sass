@@ -681,3 +681,16 @@ main
 
   #bazykin-card
     background-image: url(../images/bazykin-photo.png)
+
+// CLIENTS & PARTNERS
+
+.partners-card-container
+  @include span(3)
+  &:nth-child(4n)
+    @include span(3 last)
+  display: flex
+  justify-content: center
+  align-items: center
+  border: 1px solid $smoke
+  height: 150px
+  margin-bottom: gutter(12)
