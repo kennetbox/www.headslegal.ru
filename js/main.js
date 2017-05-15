@@ -22,7 +22,7 @@ $(document).ready(function() {
   });
 
   $(".dropdown").click(function(){
-    $(this).toggleClass("open");  
+    $(this).toggleClass("open");
   })
 
   // MAIN SLIDER
@@ -104,4 +104,66 @@ $(document).ready(function() {
     }
   ]
   });
+
+  // CALLBACK MODAL
+  // $('.order-call').click(function(e) {
+  //   e.preventDefault();
+  //   $('.callback-modal').velocity(
+  //     { scale: [1, 1.1], opacity: 1}, { display: "flex", duration: 300 }
+  //   );
+  // });
+  //
+  // // CLOSE CALLBACK
+  // $('.close-modal').click(function() {
+  //   $('.callback-modal').velocity(
+  //     { scale: [1.1], opacity: 0}, { display: "none", duration: 300 }
+  //   );
+  // });
+
+  // WRITEBACK MODAL
+  $('.order-call').click(function(e) {
+    e.preventDefault();
+    $('.writeback-modal').velocity(
+      { scale: [1, 1.1], opacity: 1}, { display: "flex", duration: 300 }
+    );
+  });
+
+  // ENTRANCE MODAL
+  $('.entrance').click(function(e) {
+    e.preventDefault();
+    $('.entrance-modal').velocity(
+      { scale: [1, 1.1], opacity: 1}, { display: "flex", duration: 300 }
+    );
+  });
+
+  // CLOSE MODALS BUTTON
+
+  function closeModal() {
+    $('.modal').velocity(
+      { scale: [1.1], opacity: 0}, { display: "none", duration: 300 }
+    );
+  }
+  $('.close-modal').click(function() {
+    closeModal();
+  });
+
+  // CLOSE MODALS ON ESC
+  $(document).on('keydown', function (e) {
+    if (e.which === 27) {
+      e.preventDefault();
+      closeModal();
+    }
+  });
+
+  // CLOSE MODAL ON OUTSIDE CLICK
+  $('.modal-wrap').click(function(e) {
+    e.stopPropagation();
+  });
+  $('.entrance-image').click(function(e) {
+    e.stopPropagation();
+  });
+  $('.modal').click(function(){
+    closeModal();
+  });
+
 });

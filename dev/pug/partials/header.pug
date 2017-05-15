@@ -2,8 +2,28 @@ header
   .apps-container
     button#search
     button#scrolltop
-  .callback-modal
-  .writeback-modal
+  .callback-modal.modal
+    .modal-wrap
+      button.close-modal
+      .section-title Заказать обратный звонок
+      p Укажите Ваше имя и контактный номер телефона и мы Вам перезвоним.
+      form
+        input(name="name" placeholder="Ваше имя" type="text" required)  
+        input(name="phone" placeholder="Номер вашего телефона" type="text" required)  
+        input(name="email" placeholder="Ваш email" type="text" )  
+        input(name="comment" placeholder="Комментарий" type="text" required)
+        button(type="submit") Заказать
+  .writeback-modal.modal
+    .modal-wrap
+      button.close-modal
+      .section-title НАПИСАТЬ НАМ ПИСЬМО
+      p Задaйте интересующий Вас вопрос или оставьте отзыв.
+      form
+        input(name="name" placeholder="Ваше имя" type="text" required)  
+        input(name="email" placeholder="Ваш email" type="text" required)  
+        input(name="phone" placeholder="Номер вашего телефона" type="text" )  
+        input(name="comment" placeholder="Комментарий" type="text" required)
+        button(type="submit") Отправить
   .zoom-container
   nav.navbar
     button#menu

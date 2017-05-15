@@ -36,9 +36,19 @@ form
     text-transform: uppercase
     color: $peru
     font-size: 15px
+    font-weight: bold
     padding: 12px 20px
     transition-property: color, background
     transition: 0.3s ease
     &:hover
       color: $air
       background: $peru
+
+
+.modal-wrap
+  form
+    @include span(12)
+    @include susy-clearfix
+
+    input
+      @include span(12)

@@ -1,0 +1,69 @@
+.close-modal
+  position: absolute
+  top: 20px
+  right: 20px
+  z-index: 99999
+  width: 20px
+  height: 20px
+  padding: 0px
+  background-image: url('../images/close-cross.svg')
+  background-position: 50% 50%
+  background-size: 20px
+  background-repeat: no-repeat
+  background-color: transparent
+  opacity: 0.8
+  transition: opacity 300ms ease
+
+  &:hover
+    opacity: 1
+
+
+.modal
+  position: fixed
+  left: 0px
+  top: 0px
+  right: 0px
+  bottom: 0px
+  z-index: 2
+  height: 100%
+  display: none
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  background-color: rgba($peru,0.85)
+  //text-align: center
+  opacity: 0
+
+
+  .modal-wrap
+    position: relative
+    display: block
+    width: 80%
+    max-width: 600px
+    padding: 30px 30px 20px
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    border-radius: 3px
+    background-color: $air
+    margin: 0 auto
+
+    .section-title
+      padding-bottom: 0
+      margin-bottom: 0
+
+    form
+      margin: 0
+      padding: 0
+
+.entrance-image
+  position: relative
+  display: block
+  width: 80%
+  max-width: 600px
+  margin-right: auto
+  margin-left: auto
+
+  img
+    position: relative
+    width: 100%

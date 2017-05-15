@@ -1111,12 +1111,17 @@ main {
 #contacts .section-title {
   padding-bottom: 10px; }
 
-section.map {
+#contacts section.map {
   padding: 0; }
 
-ymaps {
+#contacts ymaps {
   -webkit-filter: saturate(0.8);
   filter: saturate(0.8); }
+
+#contacts a.entrance {
+  text-decoration: none; }
+  #contacts a.entrance:hover {
+    text-decoration: underline; }
 
 .loyalty-card-container {
   width: 49.15254%;
@@ -1588,12 +1593,28 @@ form {
     text-transform: uppercase;
     color: #B4894B;
     font-size: 15px;
+    font-weight: bold;
     padding: 12px 20px;
     transition-property: color, background;
     transition: 0.3s ease; }
     form button:hover {
       color: #efeeeb;
       background: #B4894B; }
+
+.modal-wrap form {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0; }
+  .modal-wrap form:after {
+    content: " ";
+    display: block;
+    clear: both; }
+  .modal-wrap form input {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0; }
 
 .slider-arrows {
   position: absolute;
@@ -1815,5 +1836,79 @@ form {
       background-color: #999999; }
     .client-slider-container .client-slider-dots .slick-dots li.slick-active button {
       border: 2px solid #999999; }
+
+.close-modal {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 99999;
+  width: 20px;
+  height: 20px;
+  padding: 0px;
+  background-image: url("../images/close-cross.svg");
+  background-position: 50% 50%;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  opacity: 0.8;
+  transition: opacity 300ms ease; }
+  .close-modal:hover {
+    opacity: 1; }
+
+.modal {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 2;
+  height: 100%;
+  display: none;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: rgba(180, 137, 75, 0.85);
+  opacity: 0; }
+  .modal .modal-wrap {
+    position: relative;
+    display: block;
+    width: 80%;
+    max-width: 600px;
+    padding: 30px 30px 20px;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-radius: 3px;
+    background-color: #efeeeb;
+    margin: 0 auto; }
+    .modal .modal-wrap .section-title {
+      padding-bottom: 0;
+      margin-bottom: 0; }
+    .modal .modal-wrap form {
+      margin: 0;
+      padding: 0; }
+
+.entrance-image {
+  position: relative;
+  display: block;
+  width: 80%;
+  max-width: 600px;
+  margin-right: auto;
+  margin-left: auto; }
+  .entrance-image img {
+    position: relative;
+    width: 100%; }
 
 /*# sourceMappingURL=main.css.map */

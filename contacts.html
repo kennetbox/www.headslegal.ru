@@ -13,6 +13,7 @@
     <script src="https://code.jquery.com/jquery-3.1.0.js" type="text/javascript"></script>
     <script src="js/jquery-ui.min.js" type="text/javascript"></script>
     <script src="js/slick.min.js" type="text/javascript"></script>
+    <script src="js/velocity.min.js" type="text/javascript"></script>
     <script src="js/main.js" type="text/javascript"></script>
   </head>
   <body>
@@ -21,8 +22,34 @@
         <button id="search"></button>
         <button id="scrolltop"></button>
       </div>
-      <div class="callback-modal"></div>
-      <div class="writeback-modal"></div>
+      <div class="callback-modal modal">
+        <div class="modal-wrap">
+          <button class="close-modal"></button>
+          <div class="section-title">Заказать обратный звонок</div>
+          <p>Укажите Ваше имя и контактный номер телефона и мы Вам перезвоним.</p>
+          <form>
+            <input name="name" placeholder="Ваше имя" type="text" required>
+            <input name="phone" placeholder="Номер вашего телефона" type="text" required>
+            <input name="email" placeholder="Ваш email" type="text">
+            <input name="comment" placeholder="Комментарий" type="text" required>
+            <button type="submit">Заказать</button>
+          </form>
+        </div>
+      </div>
+      <div class="writeback-modal modal">
+        <div class="modal-wrap">
+          <button class="close-modal"></button>
+          <div class="section-title">НАПИСАТЬ НАМ ПИСЬМО</div>
+          <p>Задaйте интересующий Вас вопрос или оставьте отзыв.</p>
+          <form>
+            <input name="name" placeholder="Ваше имя" type="text" required>
+            <input name="email" placeholder="Ваш email" type="text" required>
+            <input name="phone" placeholder="Номер вашего телефона" type="text">
+            <input name="comment" placeholder="Комментарий" type="text" required>
+            <button type="submit">Отправить</button>
+          </form>
+        </div>
+      </div>
       <div class="zoom-container"></div>
       <nav class="navbar">
         <button id="menu"></button><a class="logo" href="/"></a>
@@ -55,6 +82,11 @@
       </nav>
     </header>
     <main>
+      <div class="entrance-modal modal">
+        <div class="entrance-image">
+          <button class="close-modal"></button><img src="/images/heads-entrance.jpg" alt="alt">
+        </div>
+      </div>
       <section class="map">
         <ul class="breadcrumbs">
           <li><a href="#">Главная</a></li>
@@ -69,7 +101,7 @@
               <p><b>Адрес: </b>123022, Москва, Нововаганьковский переулок, дом 9, строение 2 (метро Улица 1905 года, Краснопресненская).</p>
               <p>
                 Вход со стороны Среднего Трёхгорного переулка. <br>Здание HEADS Consulting справа от церкви,  к нему ведет дорожка с оградой.
-<br>Нужно подойти к ограде и охрана откроет калитку (фото калитки относительно церкви).
+<br>Нужно подойти к ограде и охрана откроет калитку (<a class="entrance" href="#">фото калитки относительно церкви</a>).
               </p>
               <p>Ждём Вас!</p>
               <p>
