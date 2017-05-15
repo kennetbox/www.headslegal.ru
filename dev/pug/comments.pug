@@ -4,128 +4,16 @@ html
   body
     include partials/header
     main
-      //- INDEX
-      section.main-slider-container
-        .main-slider          
-          .main-slide
-            .main-slide-img(style="background-image: url(./images/slide-01.jpg)")
-            .main-slide-desc
-              p.slide-title Более 20 лет на <br> российском рынке
-              p HEADS Consulting с 1995 года работает на российском рынке <br> юридических и консалтинговых услуг и входит в ТОП-50 лучших <br> юридических компаний России              
-          .main-slide
-            .main-slide-img(style="background-image: url(./images/slide-01.jpg)")
-            .main-slide-desc
-              p.slide-title Более 20 лет на <br> российском рынке
-              p HEADS Consulting с 1995 года работает на российском рынке <br> юридических и консалтинговых услуг и входит в ТОП-50 лучших <br> юридических компаний России              
-          .main-slide
-            .main-slide-img(style="background-image: url(./images/slide-01.jpg)")
-            .main-slide-desc
-              p.slide-title Более 20 лет на <br> российском рынке
-              p HEADS Consulting с 1995 года работает на российском рынке <br> юридических и консалтинговых услуг и входит в ТОП-50 лучших <br> юридических компаний России              
-          .main-slide
-            .main-slide-img(style="background-image: url(./images/slide-01.jpg)")
-            .main-slide-desc
-              p.slide-title Более 20 лет на <br> российском рынке
-              p HEADS Consulting с 1995 года работает на российском рынке <br> юридических и консалтинговых услуг и входит в ТОП-50 лучших <br> юридических компаний России              
-        .slider-arrows.main-slider-arrows
-        .slider-dots.main-slider-dots
-      //- services-filter
-      section#main-filter
+      //- COMMENTS
+      section.page-banner#comments
+        ul.breadcrumbs
+          li: a(href="/") Главная
+          li Комментарии в СМИ
         .wrap
-          .section-heading.white Услуги heads consulting
-          .section-subheading.white Для наших клиентов мы готовы предоставить грамотный консалтинг и комплексные <br>решения по большому количеству отраслей
-          .services-filter-container
-            .dropdown-container
-              .dropdown-toggle
-                .dropdown-text Для кого
-                .dropdown-chevron
-              .dropdown-list
-                p.dropdown-title Для кого
-                ul
-                  li: a(href="#") Для физических лиц
-                  li: a(href="#") Для юридических лиц
-            .dropdown-container
-              .dropdown-toggle
-                .dropdown-text Направление
-                .dropdown-chevron
-              .dropdown-list
-                p.dropdown-title Направление
-                ul
-                  li: a(href="#") Административно-правовая защита
-                  li: a(href="#") Бухгалтерский аутсорсинг
-                  li: a(href="#") Взыскание задолженности за ЖКУ
-                  li: a(href="#") Взыскание задолженности по договорам
-                  li: a(href="#") Договорное право
-                  li: a(href="#") Земельно-имущественные отношения
-                  li: a(href="#") Аккредитация представительства иностранным компаниям
-                  li: a(href="#") Интеллектуальная собственность и товарные знаки
-                  li: a(href="#") Досудебное разрешение споров и медиация
-            button.submit Применить параметры 
-      //- popular-services
-      section#main-popular-services
-        .wrap
-          .section-title.bottom-border Популярные услуги
-          ul.diamond
-            li: a(href="service.html") Оспаривание кадастровой стоимости
-            li: a(href="service.html") Абонентское бухгалтерское обслуживание
-            li: a(href="service.html") Адвокат по арбитражным делам
-            li: a(href="service.html") Уменьшение налога на землю
-            li: a(href="service.html") Ликвидация организации
-            li: a(href="service.html") Налоговый консультант
-            li: a(href="service.html") Изменение ВРИ
-            li: a(href="service.html") Банкротство юридических лиц
-            li: a(href="service.html") Юрист по налоговому праву
-            li: a(href="service.html") Разрешение на строительство
-            li: a(href="service.html") Проверка земельного участка
-            li: a(href="service.html") Юридический аутсорсинг
-            li: a(href="service.html") Юридическое заключение по недвижимости
-            li: a(href="service.html") Арбитражные споры
-            li: a(href="service.html") Абонентское юридическое обслуживание
-          a.all-items(href="services.html") все 118 услуг
-      //- clients&partners
-      section
-        .wrap
-          p.section-heading Клиенты и партнеры
-          p.section-subheading Для наших клиентов мы готовы предоставить грамотный консалтинг и комплексные<br> решения по большому количеству отраслей
-          .client-slider-container
-            .client-slider          
-              .client-slide
-                img(src="./images/client-alfabank.svg", alt="alt")
-              .client-slide
-                img(src="./images/client-binbank.svg", alt="alt")
-              .client-slide
-                img(src="./images/client-alfabank.svg", alt="alt")
-              .client-slide
-                img(src="./images/client-binbank.svg", alt="alt")
-              .client-slide
-                img(src="./images/client-alfabank.svg", alt="alt")
-              .client-slide
-                img(src="./images/client-binbank.svg", alt="alt")
-              
-            .client-slider-arrows.slider-arrows
-            .client-slider-dots.slider-dots
-          
-          .full-page-link
-            .page-button
-              a(href="#") все клиенты
-      //- banner-advantages
-      section#advantages-banner
-        .advantages-background
-        .advantage-items
-          .advantage
-            .advantage-head 20
-            p лет на российском рынке
-          .advantage
-            .advantage-head 600
-            p выигранных дел
-          .advantage
-            .advantage-head 700
-            p довольных клиентов
-      //- comments
-      section#comments-section
-        .wrap
-          p.section-heading Комментарии в СМИ
-          p.section-subheading Для наших клиентов мы готовы предоставить грамотный консалтинг и комплексные решения по большому количеству отраслей
+          .page-title Комментарии в СМИ
+          .page-desc Пресс-центр HEADS Consulting готов помочь организовать интервью, телевизионные съемки и участие в радиопрограммах экспертов Компании по вопросам корпоративного, налогового, таможенного права, споров по земле и недвижимости, консалтингу, брокериджу и другим в сфере арбитражного процесса.
+      section#comments-content
+        .wrap            
           .article-container
             .article-item(href="comment.html")
               .article-img
@@ -187,19 +75,9 @@ html
               a(href="comment.html").article-description
                 .article-title Последний транш — Боснии и Герцеговине — будет выплачен в ближайшие месяцы
                 p.article-text Россия завершает расчеты со странами, которым был должен Советский Союз. Как рассказал «Известиям» источник в правительстве, соглашение о погашении последнего долга на $125,2 млн готово и ожидает подписания. По его оценке …
-                
-          .full-page-link
-            .page-button
-              a(href="comments.html") все комментарии
-      //- blog
-      section
-        .wrap
-          p.section-heading Блог
-          p.section-subheading Для наших клиентов мы готовы предоставить грамотный консалтинг и комплексные решения по большому количеству отраслей          
-          .article-container
-            .article-item(href="post.html")
+            .article-item(href="comment.html")
               .article-img
-                a(href="post.html")
+                a(href="comment.html")
                   img(src="./images/comment-img-01.jpg", alt="alt")
                 .source-logo
                   img(src="./images/izvestiya.svg", alt="alt")
@@ -209,12 +87,12 @@ html
                 .author-name
                   p Александр Базыкин
                   span Управляющий партнёр
-              a(href="post.html").article-description
+              a(href="comment.html").article-description
                 .article-title Последний транш — Боснии и Герцеговине — будет выплачен в ближайшие месяцы
                 p.article-text Россия завершает расчеты со странами, которым был должен Советский Союз. Как рассказал «Известиям» источник в правительстве, соглашение о погашении последнего долга на $125,2 млн готово и ожидает подписания. По его оценке …
-            .article-item(href="post.html")
+            .article-item(href="comment.html")
               .article-img
-                a(href="post.html")
+                a(href="comment.html")
                   img(src="./images/comment-img-01.jpg", alt="alt")
                 .source-logo
                   img(src="./images/izvestiya.svg", alt="alt")
@@ -224,12 +102,12 @@ html
                 .author-name
                   p Александр Базыкин
                   span Управляющий партнёр
-              a(href="post.html").article-description
+              a(href="comment.html").article-description
                 .article-title Последний транш — Боснии и Герцеговине — будет выплачен в ближайшие месяцы
                 p.article-text Россия завершает расчеты со странами, которым был должен Советский Союз. Как рассказал «Известиям» источник в правительстве, соглашение о погашении последнего долга на $125,2 млн готово и ожидает подписания. По его оценке …
-            .article-item(href="post.html")
+            .article-item(href="comment.html")
               .article-img
-                a(href="post.html")
+                a(href="comment.html")
                   img(src="./images/comment-img-01.jpg", alt="alt")
                 .source-logo
                   img(src="./images/izvestiya.svg", alt="alt")
@@ -239,12 +117,12 @@ html
                 .author-name
                   p Александр Базыкин
                   span Управляющий партнёр
-              a(href="post.html").article-description
+              a(href="comment.html").article-description
                 .article-title Последний транш — Боснии и Герцеговине — будет выплачен в ближайшие месяцы
                 p.article-text Россия завершает расчеты со странами, которым был должен Советский Союз. Как рассказал «Известиям» источник в правительстве, соглашение о погашении последнего долга на $125,2 млн готово и ожидает подписания. По его оценке …
-            .article-item(href="post.html")
+            .article-item(href="comment.html")
               .article-img
-                a(href="post.html")
+                a(href="comment.html")
                   img(src="./images/comment-img-01.jpg", alt="alt")
                 .source-logo
                   img(src="./images/izvestiya.svg", alt="alt")
@@ -254,16 +132,30 @@ html
                 .author-name
                   p Александр Базыкин
                   span Управляющий партнёр
-              a(href="post.html").article-description
+              a(href="comment.html").article-description
                 .article-title Последний транш — Боснии и Герцеговине — будет выплачен в ближайшие месяцы
                 p.article-text Россия завершает расчеты со странами, которым был должен Советский Союз. Как рассказал «Известиям» источник в правительстве, соглашение о погашении последнего долга на $125,2 млн готово и ожидает подписания. По его оценке …
-                
-          .full-page-link
-            .page-button
-              a(href="blog.html") все статьи
-      
-      
-    
-      
-
-    include partials/footer
+            .article-item(href="comment.html")
+              .article-img
+                a(href="comment.html")
+                  img(src="./images/comment-img-01.jpg", alt="alt")
+                .source-logo
+                  img(src="./images/izvestiya.svg", alt="alt")
+              .article-author
+                .author-img
+                  img(src="./images/bazykin-thumb.jpg", alt="alt")
+                .author-name
+                  p Александр Базыкин
+                  span Управляющий партнёр
+              a(href="comment.html").article-description
+                .article-title Последний транш — Боснии и Герцеговине — будет выплачен в ближайшие месяцы
+                p.article-text Россия завершает расчеты со странами, которым был должен Советский Союз. Как рассказал «Известиям» источник в правительстве, соглашение о погашении последнего долга на $125,2 млн готово и ожидает подписания. По его оценке …
+          .page-navigation
+            ul
+              li.active: a(href="#") 1
+              li: a(href="#") 2
+              li: a(href="#") 3
+              li: a(href="#") 4
+              li: a(href="#") 5
+              li: a(href="#") ...
+              li: a(href="#") 35

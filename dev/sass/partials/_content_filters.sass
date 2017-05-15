@@ -11,7 +11,7 @@
     border-radius: 3px
     cursor: pointer
 
-    @media all and (max-width: $xs)
+    @media all and (max-width: $md)
       @include span(12)
       margin-bottom: 20px
 
@@ -120,7 +120,8 @@
     &:hover
       opacity: 1
 
-
+    @media all and (max-width: $md)
+      @include span(12)
 // CUSTOM
 
 #main-filter, #services-filter

@@ -14,5 +14,9 @@ $susy: (
   @include susy-clearfix;
   position: relative;
   padding: 0 54px;
-  width: 100%
+  width: 100%;
+
+  @media all and (max-width: $md) {
+  padding: 0 30px;
+  }
 }

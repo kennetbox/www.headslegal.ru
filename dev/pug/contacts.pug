@@ -1,0 +1,49 @@
+doctype html
+html
+  include partials/head
+  body
+    include partials/header
+    main
+      //- map
+      section.map
+        ul.breadcrumbs
+          li: a(href="#") Главная
+          li Контакты
+        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aaf8f260ea081b4dd3cc954071b3a3d59ef62eaf25a37f51b7a4ce11ba4bf68cc&amp;height=500&amp;lang=ru_RU&amp;scroll=false"></script>
+      section#contacts
+        .wrap
+          .flex-layout
+            .main-flex
+              .section-title.border-bottom Контакты
+              p
+                b Адрес: 
+                | 123022, Москва, Нововаганьковский переулок, дом 9, строение 2 (метро Улица 1905 года, Краснопресненская).
+              p Вход со стороны Среднего Трёхгорного переулка. 
+                <br>Здание HEADS Consulting справа от церкви,  к нему ведет дорожка с оградой.
+                <br>Нужно подойти к ограде и охрана откроет калитку (фото калитки относительно церкви).
+              p Ждём Вас!
+              p Время работы: с 09.00 до 21.00 (понедельник – пятница)<br>
+                | Телефон: 
+                a(href="tel:84959889798") +7 (495) 988-97-98<br>
+                | E-mail: 
+                a(href="mailto:info@headslegal.ru") info@headslegal.ru
+              p По вопросам сотрудничества, рекламы и работе со СМИ обращаться в Отдел PR и рекламы к Надежде Агибаловой по телефонному номеру: +7 (495) 988-97-98,  добавочный 150.
+              form(action="")
+                .section-title Запись на консультацию
+                p Мы заинтересованы в долгосрочном сотрудничестве с Вами, поэтому приложим все усилия и знания Компании для достижения наилучшего результата в самые сжатые сроки!
+                p: b Запись на консультацию по телефону +7 (495) 988-97-98 или через форму на сайте:
+                input(type="text" name="name" placeholder="Ваше имя")
+                input(type="text" name="phone" placeholder="Номер вашего телефона")
+                button(type="submit" value="записаться") Записаться
+
+            .flex-side
+              .section-title Популярные услуги
+              ul.diamond.linked-list
+                li: a(href="#") Оспаривание кадастровой стоимости
+                li: a(href="#") Оспаривание кадастровой стоимости
+                li: a(href="#") Оспаривание кадастровой стоимости
+                li: a(href="#") Оспаривание кадастровой стоимости
+                li: a(href="#") Оспаривание кадастровой стоимости
+                li: a(href="#") Оспаривание кадастровой стоимости
+                li: a(href="#") Оспаривание кадастровой стоимости
+              a.all-items(href="#") Все услуги   

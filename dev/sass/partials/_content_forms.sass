@@ -12,6 +12,7 @@ form
     padding-bottom: 10px
 
   input
+    @include susy-clearfix
     @include span(6)
     &:nth-child(2n)
       @include span(6 last)
@@ -37,3 +38,22 @@ form
     &:hover
       color: $air
       background: $peru
+
+
+// LOYALTY
+
+.loyalty-card-container
+  @include span(6)
+  &:nth-child(2n)
+    @include span(6 last)
+  margin-bottom: 30px
+
+  img
+    margin-bottom: 30px
+  .section-title
+    padding-bottom: 10px
+    margin-bottom: 15px
+
+  ul.diamond
+    li
+      @include span(12)
