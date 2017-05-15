@@ -96,6 +96,9 @@ section
   position: relative
   padding: 50px 0
 
+  //@media all and (max-width: $md)
+    padding: 30px 0
+
 
 // SECTION HEADING & SUBHEADING
 .section-heading
@@ -368,6 +371,9 @@ main
   padding: 100px 0
   position: relative
 
+  @media all and (max-width: $md)
+    margin-top: 60px
+
   &::before
     content: ''
     position: absolute
@@ -533,6 +539,10 @@ main
 #information-page
   padding-top: 85px
 
+  @media all and (max-width: $md)
+    padding: 30px 0
+    margin-top: 60px
+
   .main-flex
     img
       position: relative
@@ -652,10 +662,16 @@ main
     left: 0
     background: linear-gradient(to bottom, rgba($black,0) 60%, rgba($black,1) 100%)
 
+  &:hover
+    img
+      filter: saturate(1)
+
   img
     vertical-align: middle
     position: relative
     width: 100%
+    filter: saturate(0.3)
+    transition: filter 0.3s ease
 
 
 
@@ -676,6 +692,17 @@ main
       color: white
       padding: 0
       margin: 0
+      position: relative
+      padding-top: 15px
+      &::after
+        content: ''
+        position: absolute
+        display: block
+        top: 0
+        left: 0
+        height: 2px
+        width: 40px
+        background: $peru
 
     p
       color: white
@@ -782,24 +809,17 @@ main
       background: $peru
       color: white
 
-    @include span(3)
-    &:nth-child(4n)
-      @include span(3 last)
+    @include span(4)
+    &:nth-child(3n)
+      @include span(4 last)
 
     @media all and (max-width: $lg)
       &:nth-child(n)
-        @include span(4)
-      &:nth-child(3n)
-        @include span(4 last)
-
-    @media all and (max-width: $xs)
-      &:nth-child(n)
         @include span(6)
-        // margin-bottom: 20px
       &:nth-child(2n)
         @include span(6 last)
 
-    @media all and (max-width: $sm)
+    @media all and (max-width: $xs)
       &:nth-child(n)
         @include span(12)
 
@@ -817,3 +837,31 @@ main
 
 section.map
   padding: 0
+
+ymaps
+  filter: saturate(0.8)
+
+// LOYALTY
+
+.loyalty-card-container
+  @include span(6)
+  &:nth-child(2n)
+    @include span(6 last)
+
+  @media all and (max-width: $md)
+    &:nth-child(n)
+      @include span(12)
+
+
+  margin-bottom: 30px
+
+  img
+    margin-bottom: 30px
+  .section-title
+    padding-bottom: 10px
+    margin-bottom: 15px
+
+  ul.diamond
+    li
+      &:nth-child(n)
+        @include span(12)

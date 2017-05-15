@@ -609,6 +609,9 @@ main {
   align-items: center;
   padding: 100px 0;
   position: relative; }
+  @media all and (max-width: 991px) {
+    .page-banner {
+      margin-top: 60px; } }
   .page-banner::before {
     content: '';
     position: absolute;
@@ -795,6 +798,10 @@ main {
 
 #information-page {
   padding-top: 85px; }
+  @media all and (max-width: 991px) {
+    #information-page {
+      padding: 30px 0;
+      margin-top: 60px; } }
   #information-page .main-flex img {
     position: relative;
     width: 100%;
@@ -921,10 +928,18 @@ main {
     top: 0;
     left: 0;
     background: linear-gradient(to bottom, rgba(51, 51, 51, 0) 60%, #333333 100%); }
+  .team-card-container:hover img {
+    -webkit-filter: saturate(1);
+    filter: saturate(1); }
   .team-card-container img {
     vertical-align: middle;
     position: relative;
-    width: 100%; }
+    width: 100%;
+    -webkit-filter: saturate(0.3);
+    filter: saturate(0.3);
+    transition: -webkit-filter 0.3s ease;
+    transition: filter 0.3s ease;
+    transition: filter 0.3s ease, -webkit-filter 0.3s ease; }
   .team-card-container .team-card-titles {
     position: absolute;
     width: 100%;
@@ -945,7 +960,18 @@ main {
     .team-card-container .team-card-titles .section-title {
       color: white;
       padding: 0;
-      margin: 0; }
+      margin: 0;
+      position: relative;
+      padding-top: 15px; }
+      .team-card-container .team-card-titles .section-title::after {
+        content: '';
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        height: 2px;
+        width: 40px;
+        background: #B4894B; }
     .team-card-container .team-card-titles p {
       color: white;
       margin-bottom: 0; }
@@ -1053,26 +1079,17 @@ main {
     background-color: transparent;
     transition-property: color, background;
     transition: 0.3s ease;
-    width: 23.72881%;
+    width: 32.20339%;
     float: left;
     margin-right: 1.69492%; }
     .faq-list .faq-container:hover {
       background: #B4894B;
       color: white; }
-    .faq-list .faq-container:nth-child(4n) {
-      width: 23.72881%;
+    .faq-list .faq-container:nth-child(3n) {
+      width: 32.20339%;
       float: right;
       margin-right: 0; }
     @media all and (max-width: 1440px) {
-      .faq-list .faq-container:nth-child(n) {
-        width: 32.20339%;
-        float: left;
-        margin-right: 1.69492%; }
-      .faq-list .faq-container:nth-child(3n) {
-        width: 32.20339%;
-        float: right;
-        margin-right: 0; } }
-    @media all and (max-width: 767px) {
       .faq-list .faq-container:nth-child(n) {
         width: 49.15254%;
         float: left;
@@ -1081,7 +1098,7 @@ main {
         width: 49.15254%;
         float: right;
         margin-right: 0; } }
-    @media all and (max-width: 447px) {
+    @media all and (max-width: 767px) {
       .faq-list .faq-container:nth-child(n) {
         width: 100%;
         float: left;
@@ -1096,6 +1113,36 @@ main {
 
 section.map {
   padding: 0; }
+
+ymaps {
+  -webkit-filter: saturate(0.8);
+  filter: saturate(0.8); }
+
+.loyalty-card-container {
+  width: 49.15254%;
+  float: left;
+  margin-right: 1.69492%;
+  margin-bottom: 30px; }
+  .loyalty-card-container:nth-child(2n) {
+    width: 49.15254%;
+    float: right;
+    margin-right: 0; }
+  @media all and (max-width: 991px) {
+    .loyalty-card-container:nth-child(n) {
+      width: 100%;
+      float: left;
+      margin-left: 0;
+      margin-right: 0; } }
+  .loyalty-card-container img {
+    margin-bottom: 30px; }
+  .loyalty-card-container .section-title {
+    padding-bottom: 10px;
+    margin-bottom: 15px; }
+  .loyalty-card-container ul.diamond li:nth-child(n) {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0; }
 
 .services-filter-container {
   width: 100%;
@@ -1431,11 +1478,16 @@ ul.diamond {
       margin-left: 0;
       margin-right: 0;
       padding: 20px  0;
-      border-bottom: 1px solid #e6e6e6; }
+      border-bottom: 1px solid #e6e6e6;
+      color: #656565;
+      text-decoration: none;
+      transition: color 0.3s ease; }
       .flex-side ul.team-side li .article-author:after {
         content: " ";
         display: block;
         clear: both; }
+      .flex-side ul.team-side li .article-author:hover .author-name {
+        color: #B4894B; }
       .flex-side ul.team-side li .article-author .author-img {
         width: 40px;
         height: 40px;
@@ -1447,10 +1499,12 @@ ul.diamond {
         .flex-side ul.team-side li .article-author .author-img img {
           position: relative;
           width: 100%; }
-    .flex-side ul.team-side li .author-name p {
-      font-weight: bold;
-      font-size: 15px;
-      margin-bottom: 0; }
+    .flex-side ul.team-side li .author-name {
+      transition: color 0.3s ease; }
+      .flex-side ul.team-side li .author-name p {
+        font-weight: bold;
+        font-size: 15px;
+        margin-bottom: 0; }
 
 ul.breadcrumbs {
   position: absolute;
@@ -1477,6 +1531,14 @@ ul.breadcrumbs {
   color: white; }
   .page-banner ul.breadcrumbs li a {
     color: white; }
+
+@media all and (max-width: 991px) {
+  #information-page ul.breadcrumbs {
+    position: relative;
+    left: 0;
+    top: 0;
+    padding-left: 30px;
+    margin-bottom: 20px; } }
 
 form {
   width: 100%;
@@ -1512,6 +1574,12 @@ form {
       width: 49.15254%;
       float: right;
       margin-right: 0; }
+    @media all and (max-width: 767px) {
+      form input:nth-child(n) {
+        width: 100%;
+        float: left;
+        margin-left: 0;
+        margin-right: 0; } }
   form button {
     display: block;
     background-color: transparent;
@@ -1526,26 +1594,6 @@ form {
     form button:hover {
       color: #efeeeb;
       background: #B4894B; }
-
-.loyalty-card-container {
-  width: 49.15254%;
-  float: left;
-  margin-right: 1.69492%;
-  margin-bottom: 30px; }
-  .loyalty-card-container:nth-child(2n) {
-    width: 49.15254%;
-    float: right;
-    margin-right: 0; }
-  .loyalty-card-container img {
-    margin-bottom: 30px; }
-  .loyalty-card-container .section-title {
-    padding-bottom: 10px;
-    margin-bottom: 15px; }
-  .loyalty-card-container ul.diamond li {
-    width: 100%;
-    float: left;
-    margin-left: 0;
-    margin-right: 0; }
 
 .slider-arrows {
   position: absolute;

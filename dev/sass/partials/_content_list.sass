@@ -183,6 +183,14 @@ ul.diamond
         @include susy-clearfix
         padding: 20px  0
         border-bottom: 1px solid $smoke
+        color: $darkgray
+        text-decoration: none
+        transition: color 0.3s ease
+
+        &:hover
+          .author-name
+            color: $peru
+
 
         .author-img
           width: 40px
@@ -198,6 +206,7 @@ ul.diamond
             width: 100%
 
       .author-name
+        transition: color 0.3s ease
 
         p
           font-weight: bold
@@ -235,3 +244,12 @@ ul.breadcrumbs
     color: white
     a
       color: white
+
+#information-page
+  ul.breadcrumbs
+    @media all and (max-width: $md)
+      position: relative
+      left: 0
+      top: 0
+      padding-left: 30px
+      margin-bottom: 20px
