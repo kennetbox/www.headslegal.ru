@@ -4,7 +4,7 @@
   top: 0px
   right: 0px
   bottom: 0px
-  z-index: 2
+  z-index: 99
   height: 100%
   display: none
   flex-direction: row
@@ -38,9 +38,15 @@
   .left-bar
     width: 220px
     height: 100vh
-    z-index: 99
-    opacity: 0.2
 
+    @media all and (max-width: $md)
+      display: none
+
+    .search-logo
+      position: fixed
+      display: block
+      left: 50px
+      top: 45px
   .search-main
     flex: 1
     height: 100vh
@@ -76,15 +82,36 @@
       @include susy-clearfix
 
       ul.diamond
-        @include span(4)
-        &:nth-child(3n)
-          @include span(4 last)
+        @include span(3)
+        &:nth-child(4n)
+          @include span(3 last)
+
+        @media all and (max-width: 1680px)
+          &:nth-child(n)
+            @include span(4)
+          &:nth-child(3n)
+            @include span(4 last)
+
+        @media all and (max-width: 1340px)
+          &:nth-child(n)
+            @include span(6)
+          &:nth-child(2n)
+            @include span(6 last)
+
+        @media all and (max-width: 767px)
+          &:nth-child(n)
+            @include span(12)
         margin-bottom: 40px
 
         .service-list-title
           color: white
 
         li
+          @include span(3)
+          &:nth-child(4n)
+            @include span(3 last)
+
+
           &:nth-child(n)
             @include span(12)
 
