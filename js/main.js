@@ -112,13 +112,6 @@ $(document).ready(function() {
   //     { scale: [1, 1.1], opacity: 1}, { display: "flex", duration: 300 }
   //   );
   // });
-  //
-  // // CLOSE CALLBACK
-  // $('.close-modal').click(function() {
-  //   $('.callback-modal').velocity(
-  //     { scale: [1.1], opacity: 0}, { display: "none", duration: 300 }
-  //   );
-  // });
 
   // WRITEBACK MODAL
   $('.order-call').click(function(e) {
@@ -137,10 +130,12 @@ $(document).ready(function() {
   });
 
   // SEARCH
-  $('#search').click(function(e) {
+  $('#search').click(function() {
     $('.search-container').velocity(
       { scale: [1, 1.1], opacity: 1}, { display: "flex", duration: 300 }
     );
+    $('body').css("position","fixed");
+    $('html').css("overflow","hidden");
   });
 
   // CLOSE MODALS BUTTON
@@ -154,6 +149,8 @@ $(document).ready(function() {
     $('.search-container').velocity(
       { scale: [1.1], opacity: 0}, { display: "none", duration: 300 }
     );
+    $('body').removeAttr("style");
+    $('html').removeAttr("style");
   }
   $('.close-modal').click(function() {
     closeModal();

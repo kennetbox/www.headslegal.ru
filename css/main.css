@@ -44,7 +44,8 @@ header .apps-container button#scrolltop {
   margin: 0; }
 
 header .apps-container button#search {
-  position: absolute;
+  position: fixed;
+  top: 0;
   right: 0;
   z-index: 2;
   background: #B4894B;
@@ -1960,7 +1961,8 @@ form {
     -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1;
-    height: 100vh; }
+    height: 100vh;
+    overflow-y: auto; }
     .search-container .search-main .search-bar {
       width: 100%;
       float: left;
