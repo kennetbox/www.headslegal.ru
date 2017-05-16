@@ -1111,16 +1111,17 @@ main {
 #contacts .section-title {
   padding-bottom: 10px; }
 
-#contacts section.map {
+section.map {
   padding: 0; }
 
-#contacts ymaps {
+ymaps {
   -webkit-filter: saturate(0.8);
-  filter: saturate(0.8); }
+  filter: saturate(0.8);
+  z-index: 0; }
 
-#contacts a.entrance {
+a.entrance {
   text-decoration: none; }
-  #contacts a.entrance:hover {
+  a.entrance:hover {
     text-decoration: underline; }
 
 .loyalty-card-container {
@@ -1850,7 +1851,7 @@ form {
   background-size: 20px;
   background-repeat: no-repeat;
   background-color: transparent;
-  opacity: 0.8;
+  opacity: 0.9;
   transition: opacity 300ms ease; }
   .close-modal:hover {
     opacity: 1; }
@@ -1873,7 +1874,7 @@ form {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: rgba(180, 137, 75, 0.85);
+  background-color: rgba(121, 90, 45, 0.95);
   opacity: 0; }
   .modal .modal-wrap {
     position: relative;
@@ -1910,5 +1911,116 @@ form {
   .entrance-image img {
     position: relative;
     width: 100%; }
+
+.search-container {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 2;
+  height: 100%;
+  display: none;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  background-color: rgba(121, 90, 45, 0.95);
+  opacity: 0;
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0; }
+  .search-container:after {
+    content: " ";
+    display: block;
+    clear: both; }
+  .search-container .close-search {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background-image: url(../images/search-close.svg);
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+    padding: 0;
+    cursor: pointer;
+    z-index: 9999; }
+    .search-container .close-search:hover {
+      opacity: 1; }
+  .search-container .left-bar {
+    width: 220px;
+    height: 100vh;
+    z-index: 99;
+    opacity: 0.2; }
+  .search-container .search-main {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    height: 100vh; }
+    .search-container .search-main .search-bar {
+      width: 100%;
+      float: left;
+      margin-left: 0;
+      margin-right: 0;
+      padding-top: 87px;
+      margin-bottom: 70px; }
+      .search-container .search-main .search-bar input {
+        width: 100%;
+        float: left;
+        margin-left: 0;
+        margin-right: 0;
+        height: 60px;
+        display: block;
+        background: rgba(93, 65, 24, 0.5);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-radius: 3px;
+        background-image: url(../images/search.svg);
+        background-size: 20px 20px;
+        background-repeat: no-repeat;
+        background-position: 20px 50%;
+        padding-left: 65px;
+        color: white;
+        font-size: 15px;
+        text-transform: uppercase;
+        padding-right: 20px; }
+        .search-container .search-main .search-bar input::-webkit-input-placeholder {
+          color: white; }
+        .search-container .search-main .search-bar input::-moz-placeholder {
+          color: white; }
+        .search-container .search-main .search-bar input:-ms-input-placeholder {
+          color: white; }
+        .search-container .search-main .search-bar input::placeholder {
+          color: white; }
+    .search-container .search-main .search-content {
+      width: 100%;
+      float: left;
+      margin-left: 0;
+      margin-right: 0; }
+      .search-container .search-main .search-content:after {
+        content: " ";
+        display: block;
+        clear: both; }
+      .search-container .search-main .search-content ul.diamond {
+        width: 32.20339%;
+        float: left;
+        margin-right: 1.69492%;
+        margin-bottom: 40px; }
+        .search-container .search-main .search-content ul.diamond:nth-child(3n) {
+          width: 32.20339%;
+          float: right;
+          margin-right: 0; }
+        .search-container .search-main .search-content ul.diamond .service-list-title {
+          color: white; }
+        .search-container .search-main .search-content ul.diamond li:nth-child(n) {
+          width: 100%;
+          float: left;
+          margin-left: 0;
+          margin-right: 0; }
+        .search-container .search-main .search-content ul.diamond li a {
+          color: white; }
 
 /*# sourceMappingURL=main.css.map */

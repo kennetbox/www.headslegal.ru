@@ -1,0 +1,91 @@
+.search-container
+  position: fixed
+  left: 0px
+  top: 0px
+  right: 0px
+  bottom: 0px
+  z-index: 2
+  height: 100%
+  display: none
+  flex-direction: row
+  //justify-content: center
+  //align-items: center
+  background-color: rgba(#795A2D,0.95)
+  //text-align: center
+  opacity: 0
+
+  @include span(12)
+  @include susy-clearfix
+
+  .close-search
+    display: block
+    position: absolute
+    right: 20px
+    top: 20px
+    background-image: url(../images/search-close.svg)
+    background-repeat: no-repeat
+    width: 30px
+    height: 30px
+    background-color: transparent
+    opacity: 0.7
+    transition: opacity 0.3s ease
+    padding: 0
+    cursor: pointer
+    z-index: 9999
+    &:hover
+      opacity: 1
+
+  .left-bar
+    width: 220px
+    height: 100vh
+    z-index: 99
+    opacity: 0.2
+
+  .search-main
+    flex: 1
+    height: 100vh
+
+    .search-bar
+      @include span(12)
+      padding-top: 87px
+      margin-bottom: 70px
+
+      input
+        @include span(12)
+        height: 60px
+        display: block
+        background: rgba(#5D4118,0.5)
+        border: 1px solid rgba(255,255,255,0.5)
+        border-radius: 3px
+        background-image: url(../images/search.svg)
+        background-size: 20px 20px
+        background-repeat: no-repeat
+        background-position: 20px 50%
+        padding-left: 65px
+        color: white
+        font-size: 15px
+        text-transform: uppercase
+        padding-right: 20px
+
+        &::placeholder
+          color: white
+
+    .search-content
+      @include span(12)
+      @include susy-clearfix
+
+      ul.diamond
+        @include span(4)
+        &:nth-child(3n)
+          @include span(4 last)
+        margin-bottom: 40px
+
+        .service-list-title
+          color: white
+
+        li
+          &:nth-child(n)
+            @include span(12)
+
+          a
+            color: white
