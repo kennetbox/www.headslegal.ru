@@ -105,16 +105,16 @@ $(document).ready(function() {
   ]
   });
 
-  // CALLBACK MODAL
-  // $('.order-call').click(function(e) {
-  //   e.preventDefault();
-  //   $('.callback-modal').velocity(
-  //     { scale: [1, 1.1], opacity: 1}, { display: "flex", duration: 300 }
-  //   );
-  // });
+  //CALLBACK MODAL
+  $('.order-call').click(function(e) {
+    e.preventDefault();
+    $('.callback-modal').velocity(
+      { scale: [1, 1.1], opacity: 1}, { display: "flex", duration: 300 }
+    );
+  });
 
   // WRITEBACK MODAL
-  $('.order-call').click(function(e) {
+  $('.write-back').click(function(e) {
     e.preventDefault();
     $('.writeback-modal').velocity(
       { scale: [1, 1.1], opacity: 1}, { display: "flex", duration: 300 }

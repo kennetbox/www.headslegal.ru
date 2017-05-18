@@ -1,0 +1,99 @@
+footer
+  @include span(12)
+  @include susy-clearfix
+
+  background: $black
+  padding: 30px 0 20px
+
+  .wrap
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    &::after
+      display: none
+
+    ul
+      @media all and (max-width: 1100px)
+        &:nth-child(4)
+          display: none
+
+      margin-bottom: 30px
+
+      li
+        position: relative
+
+        a
+          position: relative
+          display: block
+          width: 100%
+          color: white
+          padding: 5px 0
+          transition: color 0.3s ease
+          &:hover
+            color: $peru
+
+      .phone-ico
+        background-image: url(../images/phone-ico.svg)
+        background-repeat: no-repeat
+        background-position: 0 50%
+        a
+          padding-left: 30px
+
+      .map-ico
+        @extend .phone-ico
+        background-image: url(../images/location-ico.svg)
+
+      .mail-ico
+        @extend .phone-ico
+        background-image: url(../images/mail-ico.svg)
+
+  .copyright
+    @include span(12)
+    @include susy-clearfix
+    padding-top: 20px
+    border-top: 1px solid $darkgray
+
+    .wrap
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      align-items: center
+      &::after
+        display: none
+
+      p
+        margin-bottom: 0
+
+      .design-by
+        opacity: 0.6
+        transition: opacity 0.3s ease
+        &:hover
+          opacity: 1
+
+    .footer-social
+      text-align: right
+
+      a
+        display: inline-block
+        margin-right: 15px
+        width: 40px
+        height: 40px
+        &:last-child
+          margin-right: 0
+
+        opacity: 0.6
+        transition: opacity 0.3s ease
+
+        &:hover
+          opacity: 1
+
+      .facebook-link
+        background-image: url(../images/facebook.svg)
+
+      .youtube-link
+        @extend .facebook-link
+        background-image: url(../images/youtube.svg)
+
+      .twitter-link
+        @extend .facebook-link
+        background-image: url(../images/tweet.svg)
