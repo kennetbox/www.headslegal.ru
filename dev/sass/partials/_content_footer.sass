@@ -30,6 +30,10 @@ footer
         &:nth-child(4)
           display: none
 
+      @media all and (max-width: 700px)
+        &:nth-child(-n+4)
+          display: none
+
       margin-bottom: 30px
 
       li
@@ -77,7 +81,11 @@ footer
       p
         margin-bottom: 0
 
+        @media all and (max-width: 700px)
+          margin-left: 20px
+
       .design-by
+        min-width: 80px
         opacity: 0.6
         transition: opacity 0.3s ease
         &:hover
@@ -85,6 +93,9 @@ footer
 
     .footer-social
       text-align: right
+
+      @media all and (max-width: 700px)
+        display: none
 
       a
         display: inline-block

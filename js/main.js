@@ -182,4 +182,7 @@ $(document).ready(function() {
     closeModal();
   });
 
+  // SCROLL TOP BUTTON
+
+
 });
