@@ -1631,6 +1631,18 @@ footer {
     content: " ";
     display: block;
     clear: both; }
+  footer button#scrolltop {
+    width: 46px;
+    height: 46px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background: #B4894B;
+    background-image: url(../images/scrolltop.png);
+    background-position: 50% 50%;
+    background-size: 20px 11px;
+    background-repeat: no-repeat; }
   footer .wrap {
     display: -webkit-flex;
     display: -ms-flexbox;
